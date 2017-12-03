@@ -14,10 +14,10 @@ var argv = yargs.options({
 	.alias('help', 'h')
 	.argv;
 
-var encodedAddress = encodeURIComponent(argv.address);
-var geocodeURL = `http://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
-
-function getWeather() {
+function getWeather(location) {
+	var encodedAddress = encodeURIComponent(location);
+ 	//var encodedAddress = encodeURIComponent(argv.address);
+	var geocodeURL = `http://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
 	// Automatically JSON.stringfy our address, Promises built-in
 	axios.get(geocodeURL).then( (response) => {
 		// headers, response.data, body
