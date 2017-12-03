@@ -1,0 +1,27 @@
+{
+  "name": "weathers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidpham5/weathers.git"
+  },
+  "author": "David Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidpham5/weathers/issues"
+  },
+  "homepage": "https://github.com/davidpham5/weathers",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "yargs": "^10.0.3"
+  }
+}
