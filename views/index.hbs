@@ -19,6 +19,21 @@
 					  <input type="text" name="get weather" id="search_weather" class="form-control" placeholder="" aria-describedby="searchWeather">
 					</div>
 				</form>
+				<h2>{{ location }}</h2>
+				<ul>
+					<li>
+						It is {{weather.temperature}} degrees
+					</li>
+					<li>
+						It's {{weather.summary}}
+					</li>
+					<li>
+						It will be {{weather.hourlySummary}}
+					</li>
+					<li>
+						But It feels like {{weather.apparentTemperature}}
+					</li>
+				</ul>
 			</div>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
