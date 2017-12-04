@@ -5,7 +5,7 @@ $(function() {
     function getLocation(e) {
         e.preventDefault();
         var location = $('#search_weather').val();
-        $.get('../app/modules/weatherAPI.js', displayWeather)
+        $.get('./app/routes/api/weather-api.js', displayWeather)
         return location;
     }
     
