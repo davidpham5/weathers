@@ -1,8 +1,6 @@
 const axios = require('axios');
 const key = require('../../private/api-key');
 
-var location = '10219 Gardiner Ave';
-
 var Weather = function(location) {
 	var self = this;
 	var encodedAddress = encodeURIComponent(location);
@@ -12,7 +10,6 @@ var Weather = function(location) {
 	self.getWeather = axios.get(geocodeURL)
 		.then((response) => {
 			// headers, response.data, body
-			
 			if (response.data.status === 'ZERO_RESULTS') {
 				throw new Error('Unable to find that address');
 			}

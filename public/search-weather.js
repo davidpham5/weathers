@@ -4,12 +4,11 @@ $(function() {
     
     function getLocation(e) {
         e.preventDefault();
-        var location = $('#search_weather').val();
-        $.get('./app/routes/api/weather-api.js', displayWeather)
-        return location;
+        // var location = $('#search_weather').val();
+        $.get('api/location-api.js', displayLocation);
     }
     
-    function displayWeather() {
-
+    function displayLocation(loc) {
+        $('.location').html(loc);
     }
 });

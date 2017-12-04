@@ -1,7 +1,5 @@
 const axios = require('axios');
 
-var location = '10219 Gardiner Ave';
-
 var Location = function(location) {
     var self = this;
     var loc;
@@ -17,7 +15,7 @@ var Location = function(location) {
                 return loc;
             })
             .catch((error) => {
-                console.log(error);
+                console.log(error.message);
             });
         return promise;
     }

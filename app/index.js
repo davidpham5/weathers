@@ -6,7 +6,6 @@ var port = process.env.PORT || 3000;
 
 var Weather = require('./models/Weather');
 var Location = require('./models/Location');
-var location = '10219 Gardiner Ave';
 
 app.use(express.static('app'));
 

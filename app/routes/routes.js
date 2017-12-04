@@ -4,7 +4,10 @@ var Weather = require('./../models/Weather');
 var Location = require('./../models/Location');
 
 router.get('/', function(request, resp) {
-    var location = 20902;
+    // search-weather needs to supply location
+    if (!location) {
+        var location = '';
+    }
 	Weather(location).getWeather.then(weather => {
         return weather;
     })
@@ -17,11 +20,11 @@ router.get('/', function(request, resp) {
                 })
             })
             .catch((error) => {
-                console.log(error);
+                console.log(error.message);
             });
     })
 	.catch(function(error) {
-		console.log(error);
+		console.log(error.message);
     });
 });
 
