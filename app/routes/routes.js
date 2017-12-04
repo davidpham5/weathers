@@ -6,10 +6,20 @@ var Location = require('./../models/Location');
 router.get('/', function(request, resp) {
     var location = 20902;
 	Weather(location).getWeather.then(weather => {
-		resp.render('index.hbs', {
-			weather: weather
-		})
-	})
+        return weather;
+    })
+    .then((weather) => {
+        Location(location).getLocation()
+            .then((loc) => {
+               resp.render('index.hbs', {
+                    weather: weather,
+                    location: loc
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    })
 	.catch(function(error) {
 		console.log(error);
     });

@@ -5,12 +5,13 @@ var Weather = require('../../models/Weather');
 
 router.get('/', function(req, res) {
     var location = 20902;
-	Weather(location).getWeather.then(weather => {
-		res.send(weather)
-	})
-	.catch(function(error) {
-		console.log(error);
-	});
+    Weather(location).getWeather
+        .then(weather => {
+		    res.send(weather)
+    	})
+	    .catch(function(error) {
+		    console.log(error);
+        });
 })
 
 module.exports = router;
