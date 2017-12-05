@@ -11,12 +11,13 @@ $(function() {
         $.get('api/location/?location=' + location, displayLocation);
     }
     
-    function displayLocation(weather) {
-    	console.log(weather);
-        $('.location').html(weather.location);
-        $('#temperature').html(weather.weather.temperature);
-        $('#summary').html(weather.weather.summary);
-        $('#apparentTemperature').html(weather.weather.apparentTemperature);
-        $('#hourlySummary').html(weather.weather.hourlySummary);
+    function displayLocation(data) {
+        var summary = data.weather.summary.toLowerCase();
+        var hourlySummary = data.weather.hourlySummary.toLowerCase();
+        $('.location').html(data.location);
+        $('#temperature').html(`It's currently ${data.weather.temperature} degrees.`);
+        $('#summary').html(`It's looks it is ${summary}.`);
+        $('#apparentTemperature').html(`It feels like though, it is ${data.weather.apparentTemperature} degrees.`);
+        $('#hourlySummary').html(`The next few hours looks like ${hourlySummary}`);
     }
 });
