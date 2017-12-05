@@ -25,20 +25,12 @@
 				</div>
 			</form>
 			<h2 class="location">{{ location }}</h2>
-			<ul>
-				<li>
-					It is <span id="temperature">{{weather.temperature}}</span> degrees
-				</li>
-				<li>
-					It's <span id="summary">{{weather.summary}}</span>
-				</li>
-				<li>
-					It will be <span id="hourlySummary">{{weather.hourlySummary}}</span>
-				</li>
-				<li>
-					But It feels like <span id="apparentTemperature">{{weather.apparentTemperature}}</span>
-				</li>
-			</ul>
+			<aside>
+				<span id="temperature">{{weather.temperature}}</span> 
+				<span id="summary">{{weather.summary}}</span>
+				<span id="hourlySummary">{{weather.hourlySummary}}</span>
+				<span id="apparentTemperature">{{weather.apparentTemperature}}</span>
+			</aside>
 		</section>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

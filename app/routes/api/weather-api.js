@@ -4,6 +4,7 @@ var axios = require('axios');
 var Weather = require('../../models/Weather');
 
 router.get('/', function(req, res) {
+    var location = req.query.location;
 	Weather(location).getWeather
 		.then(weather => {
 			res.send(weather)

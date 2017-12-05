@@ -11,12 +11,12 @@ $(function() {
         $.get('api/location/?location=' + location, displayLocation);
     }
     
-    function displayLocation(response) {
-    	console.log(response)
-        $('.location').html(response.location);
-        $('#temperature').html(response.weather.temperature);
-        $('#summary').html(response.weather.summary);
-        $('#apparentTemperature').html(response.weather.apparentTemperature);
-        $('#hourlySummary').html(response.weather.hourlySummary);
+    function displayLocation(weather) {
+    	console.log(weather);
+        $('.location').html(weather.location);
+        $('#temperature').html(weather.weather.temperature);
+        $('#summary').html(weather.weather.summary);
+        $('#apparentTemperature').html(weather.weather.apparentTemperature);
+        $('#hourlySummary').html(weather.weather.hourlySummary);
     }
 });
