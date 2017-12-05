@@ -1,12 +1,22 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
+var Weather = require('./../../models/Weather');
 var Location = require('../../models/Location');
 
 router.get('/', function(req, res) {
-	Location(loc).getLocation
-		.then(location => {
-			res.send(location)
+	var location = req.query.location
+	new Location(location).getLocation()
+		.then(loc => {
+			Weather(location).getWeather.then((weather) => {
+		        res.send({
+                    weather: weather,
+                    location: loc
+                })
+		    })
+			.catch(function(error) {
+				console.log(error.message);
+		    });
 		})
 		.catch(function(error) {
 			console.log(error.message);
