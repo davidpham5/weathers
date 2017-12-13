@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/davidpham5/weathers",
   "dependencies": {
+    "angular": "^1.6.7",
     "axios": "^0.17.1",
     "express": "^4.16.2",
     "hbs": "^4.0.1"
   },
   "devDependencies": {
+    "@angular/cli": "^1.6.0",
     "yargs": "^10.0.3"
   }
 }
