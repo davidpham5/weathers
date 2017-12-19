@@ -7,7 +7,6 @@ $(function() {
 
         var location = $("#search_weather").val()
 
-        // var location = $('#search_weather').val();
         $.get('api/location/?location=' + location, displayLocation);
     }
     
