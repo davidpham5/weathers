@@ -24,12 +24,12 @@
 					<input type="text" name="get weather" id="search_weather" class="form-control" placeholder="enter location" aria-describedby="searchWeather">
 				</div>
 			</form>
-			<h2 class="location">{{ location }}</h2>
+			<h2 class="location text-center">{{ location }}</h2>
 			<aside>
-				<span id="temperature">{{weather.temperature}}</span> 
-				<span id="apparentTemperature">{{weather.apparentTemperature}}</span>
-				<span id="summary">{{weather.summary}}</span>
-				<span id="hourlySummary">{{weather.hourlySummary}}</span>
+				<h2 id="temperature">{{weather.temperature}}</h2>&nbsp;
+				<h2 id="summary">{{weather.summary}}</h2>
+				<h2 id="apparentTemperature" class="text-center">{{weather.apparentTemperature}}</h2>	
+				<h2 id="hourlySummary" class="text-center">{{weather.hourlySummary}}</h2>
 			</aside>
 		</section>
 		<!-- Optional JavaScript -->

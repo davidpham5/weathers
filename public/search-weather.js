@@ -13,10 +13,12 @@ $(function() {
     function displayLocation(data) {
         var summary = data.weather.summary.toLowerCase();
         var hourlySummary = data.weather.hourlySummary.toLowerCase();
+        var temp = Math.round(data.weather.temperature);
+        var apparentTemp = Math.round(data.weather.apparentTemperature);
         $('.location').html(data.location);
-        $('#temperature').html(`It's currently ${data.weather.temperature} degrees.`);
-        $('#summary').html(`It's looks it is ${summary}.`);
-        $('#apparentTemperature').html(`It feels like though, it is ${data.weather.apparentTemperature} degrees.`);
-        $('#hourlySummary').html(`The next few hours looks like ${hourlySummary}`);
+        $('#temperature').html(`${temp} ${String.fromCharCode(176)}F`);
+        $('#summary').html(summary);
+        $('#apparentTemperature').html(`It feels like ${apparentTemp} ${String.fromCharCode(176)}F`);
+        $('#hourlySummary').html(hourlySummary);
     }
 });
